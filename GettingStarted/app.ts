@@ -41,5 +41,46 @@ arr3=[true,false,false,true]
 let arr4:any[];
 arr4=[1,"masai",true]
 
+// TUPLE
 
+let tpl:[number,string]; // Fixed length
 
+tpl=[4,"qwe"];
+
+console.log(tpl[1].substring(0,tpl[1].length))
+
+// tpl=[" qwe",4]   // ERROR
+
+// ENUMERATED DATA TYPE;
+
+// const enum color{
+//     red,green,yellow
+// }
+enum color{
+    red="RED",yellow="YELOW",green="green"
+}
+// for(let key in color){
+
+// }
+ //console.log(color.red)
+
+ // NULL and Undefined
+
+ let n:null=null;
+
+ let u:undefined=undefined;
+
+ // VOID (Do not need any return value)
+
+ function add(a:number,b:number):void{
+     console.log(a+b);
+ }
+ add(4,3)
+
+ // ANY TYPE
+ let an:any;
+ an=5;
+ an="solute";
+
+ let arr:any[];
+ arr=[3,"4",true];
