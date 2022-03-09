@@ -103,8 +103,7 @@ usertype = "admin";
 usertype = "user";
 // usertype="producer" // ERROr
 var value;
-var data;
-data = {
+var data = {
     status: true,
     cityname: {
         title: "bangalore"

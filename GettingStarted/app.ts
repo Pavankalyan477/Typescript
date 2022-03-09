@@ -206,7 +206,7 @@ function user({first,last}:{first:string;last:string}):string{
 
   // InterSection type
 
-  interface Error{
+  interface ErrorInterface{
       status:boolean,
       error?:{
           message:string
@@ -223,11 +223,10 @@ function user({first,last}:{first:string;last:string}):string{
       }
   }
 
-  type cityResponse=Error & cityData;
-  type countryResponse=Error & country
+  type cityResponse=ErrorInterface & cityData;
+  type countryResponse=ErrorInterface & country
 
-  let data:cityResponse;
-  data={
+  let data:cityResponse={
 
     status:true,
     cityname:{
