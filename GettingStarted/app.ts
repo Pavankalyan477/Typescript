@@ -130,3 +130,107 @@ enum color{
             return a+b;
         }
         fnc2(3,3)
+
+
+// OBJECTS FUNCTIONS
+
+function user({first,last}:{first:string;last:string}):string{
+    return first+" "+last;
+}
+
+    // To reduce length and complexity of a code We can use interface
+
+    interface person{
+        first:string;
+        last:string;
+    }
+    function user1({first,last}:person):string{
+        return first+" "+last;
+    }
+    user1({first:"pavan",last:"kalyan"})
+
+    // IF something is OPTIONAL
+    // In above case if last name is oprtional, Then we will get
+
+    // fisrt undefined, To over come this see below.
+
+    interface person1{
+        first:string;
+        last?:string;
+    }
+    function user2({first,last}:person1):string{
+       if(last) return first+" "+last;
+       return first;
+    }
+    user2({first:"pavan"})
+
+
+
+   
+   // UNION TYPE
+
+   let usertype:"admin" | "user" | "director";
+   usertype="admin";
+   usertype="user"
+
+  // usertype="producer" // ERROr
+
+  let value: number|string|boolean|null;
+
+  //
+
+  // TYPES
+  // KEYWORD type
+
+  type Loading={
+      state:"loading"
+  }
+
+  type Failed={
+      state:"failed",
+      status:number
+  }
+
+  type success={
+      state:"success",
+      response:{
+          title:string,
+          status:boolean,
+          id:string,
+          count:number
+      }
+  }
+
+  type networkstate=Loading|Failed|success;
+
+
+  // InterSection type
+
+  interface Error{
+      status:boolean,
+      error?:{
+          message:string
+      }
+  }
+  interface cityData{
+      cityname:{title:string};
+  }
+
+  interface country{
+      details:{
+          countofcitites:number,
+          capital:string
+      }
+  }
+
+  type cityResponse=Error & cityData;
+  type countryResponse=Error & country
+
+  let data:cityResponse;
+  data={
+
+    status:true,
+    cityname:{
+        title:"bangalore"
+    }
+  }

@@ -80,3 +80,33 @@ var fnc2 = function (a, b) {
     return a + b;
 };
 fnc2(3, 3);
+// OBJECTS FUNCTIONS
+function user(_a) {
+    var first = _a.first, last = _a.last;
+    return first + " " + last;
+}
+function user1(_a) {
+    var first = _a.first, last = _a.last;
+    return first + " " + last;
+}
+user1({ first: "pavan", last: "kalyan" });
+function user2(_a) {
+    var first = _a.first, last = _a.last;
+    if (last)
+        return first + " " + last;
+    return first;
+}
+user2({ first: "pavan" });
+// UNION TYPE
+var usertype;
+usertype = "admin";
+usertype = "user";
+// usertype="producer" // ERROr
+var value;
+var data;
+data = {
+    status: true,
+    cityname: {
+        title: "bangalore"
+    }
+};
