@@ -59,3 +59,24 @@ an = 5;
 an = "solute";
 var arr;
 arr = [3, "4", true];
+var obj1;
+obj1 = { label: "add", color: "red", size: 20 };
+var obj2;
+obj2 = { color: "red", size: 20 };
+console.log(obj2);
+// FUNCTIONS
+//Normal Functions
+function sum1(a, b) {
+    return a + b;
+}
+sum1(3, 4);
+// Anonymous functions
+var fnc1 = function (a, b) {
+    //  return a+b; // errror
+    //console.log(a+b)
+};
+fnc1(3, 5);
+var fnc2 = function (a, b) {
+    return a + b;
+};
+fnc2(3, 3);

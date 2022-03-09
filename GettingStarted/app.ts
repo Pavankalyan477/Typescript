@@ -84,3 +84,49 @@ enum color{
 
  let arr:any[];
  arr=[3,"4",true];
+
+ // OBJECTS
+
+    // INTERFACE
+
+    interface props{
+        label:string;
+        color:string;
+        size:number;
+    }
+    let obj1:props;
+    obj1={label:"add",color:"red",size:20}
+   // console.log(obj1);
+
+   // Keys are OPTTIONAL
+   interface opt{
+       label?:string;
+       color:string;
+       size?:number
+   }
+   let obj2:opt;
+   obj2={color:"red",size:20}
+
+   console.log(obj2)
+
+   // FUNCTIONS
+
+        //Normal Functions
+
+        function sum1(a:number,b:number):number{
+            return a+b;
+        }
+        sum1(3,4)
+
+        // Anonymous functions
+
+        const fnc1=function(a:number,b:number):void{
+          //  return a+b; // errror
+          //console.log(a+b)
+        }
+        fnc1(3,5);
+
+        const fnc2=(a:number,b:number):number=>{
+            return a+b;
+        }
+        fnc2(3,3)
