@@ -233,3 +233,9 @@ function user({first,last}:{first:string;last:string}):string{
         title:"bangalore"
     }
   }
+
+  //Classes and Interfaces
+        //Inheritances
+        //OOPS
+        //Generics
+        //Decorators
